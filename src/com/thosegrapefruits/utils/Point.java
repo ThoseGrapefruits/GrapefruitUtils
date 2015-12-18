@@ -36,6 +36,14 @@ public class Point implements Comparable<Point>, Cloneable {
     this.y = y;
   }
 
+  public Point scale(double xFactor, double yFactor) {
+    return new Point(x * xFactor, y * yFactor);
+  }
+
+  public Point shift(double xShift, double yShift) {
+    return new Point(x + xShift, y + yShift);
+  }
+
   @Override
   public Point clone() {
     try {
